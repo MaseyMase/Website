@@ -4,6 +4,8 @@ var postcss = require ('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var cssvars = require('postcss-simple-vars');
 var nested = require('postcss-nested');
+var cssImport = require('postcss-import')
+var mixins = require('postcss-mixins');
 var browserSync = require('browser-sync').create();
 
 gulp.task('default', function() {
@@ -15,12 +17,15 @@ gulp.task('html', function() {
 	console.log("image if i could use gulp really well :P!")
 });
 
-
-gulp.task('style', function() {
-	return gulp.src('./app/css/style.css')
-	.pipe(postcss([cssvars, nested, autoprefixer]))
-	.pipe(gulp.dest('./app/temp/style'))
-});
+gulp.task('styles', function() {
+	return gulp.src('./app/assets/styles/styles.css')
+		.pipe(postcss([cssImport, mixins, cssvars, nested, autoprefixer]))
+		.on('error', function(errorInfo) {
+			console.log(errorInfo.toString);
+			this.emit('end');
+		})
+		.pipe(gulp.dest('./app/temp/styles'));
+})
 
 
 gulp.task('watch', function() {
@@ -33,11 +38,16 @@ gulp.task('watch', function() {
 
 
 	watch('./app/index.html', function() {
-		gulp.start('html');
+		browserSync.reload();
 	});
 
 	watch('./app/css/style.css', function() {
-   		gulp.start('style');
+   		gulp.start('cssInject');
   });
 
+});
+
+gulp.task('cssInject', ['styles'], function() {
+	return gulp.src('./app/temp/style/style.css')
+	.pipe(browserSync.stream());
 });

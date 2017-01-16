@@ -562,3 +562,7 @@ template {
   height: 20px;
   overflow: hidden;
 }
+
+body {
+  columns: 300px 2;
+}

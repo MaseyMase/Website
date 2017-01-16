@@ -485,6 +485,7 @@ template {
 .jumbotron img {
   width: 350px;
   height: 250px;
+  -webkit-transition: 1s;
   transition: 1s;
 }
 
@@ -561,4 +562,10 @@ template {
   width: 200px;
   height: 20px;
   overflow: hidden;
+}
+
+body {
+  -webkit-columns: 300px 2;
+     -moz-columns: 300px 2;
+          columns: 300px 2;
 }

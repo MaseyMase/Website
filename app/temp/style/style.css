@@ -563,9 +563,3 @@ template {
   height: 20px;
   overflow: hidden;
 }
-
-body {
-  -webkit-columns: 300px 2;
-     -moz-columns: 300px 2;
-          columns: 300px 2;
-}

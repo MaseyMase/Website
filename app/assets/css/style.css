@@ -3,13 +3,14 @@
 
 }
 
+
 body {
   height:100%;
 }
 
 .header {
   width: 100%;
-  height: 500px;
+  height: 600px;
   margin-top: -20px;
   background-image: url("http://wallpapercave.com/wp/GProxpt.jpg");
   background-size: cover;
@@ -31,6 +32,7 @@ body {
   text-align: center;
   font-size: 10rem;
   color: white;
+  margin-top:;
 }
 
 hr { 
@@ -106,9 +108,10 @@ hr:after {
 
 .portfolio {
   width: 100%;
-  height: 800px;
+  height: auto;
   background-color: white;
   display: block;
+  margin-bottom: 100px;
 }
 
 
@@ -127,57 +130,69 @@ hr:after {
     padding-left: 10px;
 }
 
-.portfolio p {
-  padding-top: 50px;
-  border: 1px solid red;
+.potfolio img:hover {
 }
 
+.portfolio p {
+  line-height: 50px;
+  font-weight: 700;
+  width: 450px;
+  text-align: center;
+  display: block;
+}
 
+.text-p {
+  margin-left: auto;
+  margin-right: auto;
+  width: 450px;
+  
+}
 
-
-#contact {
+.contact {
   width: 100%;
   height: 600px;
   background-color: #222222;
 }
 
-.contact{
-    font-family: 'Open Sans Condensed', arial, sans;
-    width: 500px;
-    padding: 30px;
-    background: #222222;
-    margin: 50px auto;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
-
-} 
-
-.contact h2{
-    background: #4D4D4D;
-    text-transform: uppercase;
-    font-family: 'Open Sans Condensed', sans-serif;
-    color: #797979;
-    font-size: 18px;
-    font-weight: 100;
-    padding: 20px;
-    margin: -30px -30px 30px -30px;
-    text-align: center;
-    text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+.contact h2 {
+  text-align: center;
+  color: #fff;
+  padding-top: 50px;
+  padding-bottom: 25px;
 }
 
-.contact input {
-  width: 200px;
-  height: 20px;
-  overflow: hidden;
+.form-style {
+  background-color: white;
+  width: 450px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+.form-style input {
+  display: block;
+  padding: 20px;
+  width: 100%;
+  height: 20%;
+}
+
+
+.form-style textarea {
+  width: 100%;
+  height: 40%;
+  margin-bottom: -10px;
+}
+
+
 
 .footer {
   background-color: #222222;
   height: 100px;
-  border-top: 1px solid white;
+  border-top: 1px dotted white;
   margin-bottom: 0;
   display: block;
+  height: 100%;
+
 }
 
 .footer p {
@@ -187,3 +202,4 @@ hr:after {
   font-weight: 700;
   color: white;
 }
+

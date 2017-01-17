@@ -24,7 +24,7 @@ gulp.task('styles', function() {
 			console.log(errorInfo.toString);
 			this.emit('end');
 		})
-		.pipe(gulp.dest('./app/temp/styles'));
+		.pipe(gulp.dest('./app/temp/style'));
 })
 
 
@@ -41,13 +41,19 @@ gulp.task('watch', function() {
 		browserSync.reload();
 	});
 
-	watch('./app/css/style.css', function() {
-   		gulp.start('cssInject');
-  });
+	watch('./app/assets/css/style.css', function() {
+		browserSync.reload();
+	});
+
+
+	//watch('./app/css/style.css', function() {
+   	//	gulp.start('cssInject');
+
+//  });
 
 });
 
 gulp.task('cssInject', ['styles'], function() {
-	return gulp.src('./app/temp/style/style.css')
+	return gulp.src('./temp/style/style.css')
 	.pipe(browserSync.stream());
 });

@@ -157,8 +157,8 @@ hr:after {
 }
 
 @media (max-width: 835px) {
-  #About {
-    height: 100%;
+  .about-section div p {
+
   }
 }
 

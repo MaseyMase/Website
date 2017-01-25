@@ -116,7 +116,7 @@ hr:after {
   height: auto;
   background-color: white;
   display: block;
-  margin-bottom: 100px;
+  margin: 70px 0 170px 0;
 }
 
 .portfolio-image {
@@ -143,8 +143,14 @@ hr:after {
   font-weight: 700;
 }
 
-.portfolio-image > p:hover {
-  color: black;
+figcaption {
+  color: white;
+  background-color: ;
+  width: 400px;
+  margin-left: 60px;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
 }
 
 .text-p {
@@ -157,12 +163,27 @@ hr:after {
 }
 
 
+.Mase-background {
 
+  background: url("https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/11239687_10206283367795936_3050018344311316144_n.jpg?oh=bc1f2b1506389a9ddf4bffd95459c167&oe=590142CA") no-repeat  fixed;
+  background-size: cover;
+  height: 400px;
+}
+
+.Mase-background h1 {
+  text-align: center;
+  height: 50%;
+  line-height: 200px;
+  color: black;
+  font-weight: 700;
+  margin-top: -80px;
+}
 
 .about-section {
   width: 100%;
   height: 100%;
-  background-color: #222222;
+  background-color: black;
+  margin-top: -30px;
   margin-bottom: -30px;
   padding-bottom: 70px;
 
@@ -224,7 +245,7 @@ hr:after {
   margin-left: auto;
   margin-right: auto;
   padding: 50px 50px 50px 50px;
-  background-color: #222222;
+  background-color: black;
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
@@ -256,7 +277,7 @@ hr:after {
 
 
 .footer {
-  background-color: #222222;
+  background-color: black;
   height: 100px;
   border-top: 1px dotted white;
   margin-bottom: 0;
